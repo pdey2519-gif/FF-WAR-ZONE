@@ -1,5 +1,5 @@
 {
-  "appId": "com.ffwarzones.game",
+  "appId": "com.ffwarzone.game",
   "appName": "FF WAR ZONE",
-  "webDir": "."
+  "webDir": "www"
 }
