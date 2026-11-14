@@ -1,0 +1,18 @@
+workflows:
+  android-workflow:
+    name: FF WAR ZONE Android APK
+    max_build_duration: 60
+    environment:
+      node: 20
+      java: 17
+    scripts:
+      - name: Install dependencies
+        script: npm install
+      - name: Create Android project
+        script: npx cap add android
+      - name: Sync game files
+        script: npx cap sync android
+      - name: Build APK
+        script: cd android && ./gradlew assembleDebug
+    artifacts:
+      - android/app/build/outputs/apk/debug/app-debug.apk
